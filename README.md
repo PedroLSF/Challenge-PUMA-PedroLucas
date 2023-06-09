@@ -115,7 +115,7 @@ Caso queira rodar os testes, pode fazer o seguinte:
       npx cypress open
     ```
     
-*P.S.: E que ele precisa do Backend ligado para funcionar*
+*P.S.: E que ele precisa do Backend e Frontend ligado para funcionar*
 
 *P.S.: Vale ressaltar que para testar o Cypress, temos que reiniciar o backend quando vamos testar para resetar a variável que lista os usuários*
 
