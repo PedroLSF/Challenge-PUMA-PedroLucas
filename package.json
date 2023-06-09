@@ -2,5 +2,9 @@
   "dependencies": {
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.12.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.1.0",
+    "cypress": "^12.14.0"
   }
 }

@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 
 const Cardlist = ({cards, replace}) => {
 
+    // Aqui está meu Card List é a lista que recebera todos os cards
+
     return (
         <div className='flex flex-col w-2/3 mb-6'>
         {cards.map(card => (

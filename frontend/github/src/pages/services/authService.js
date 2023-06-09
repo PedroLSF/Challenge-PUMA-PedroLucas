@@ -1,6 +1,8 @@
 import api from './api'
 import { toast } from 'react-toastify';
 
+// Cada requisição sendo listada em ordem (POST, GET, PATCH E DELETE)
+
 const addUser = (addUserValues) => 
     api.post('/users', addUserValues)
         .then((response) => response)

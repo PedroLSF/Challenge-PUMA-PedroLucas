@@ -1,5 +1,8 @@
 const userService = require("../service/userService.js");
 
+// Aqui no controller vamos acessar a pasta de "Service" para que possamos utilizar seus recursos e fazer alguma atividade listada, caso não consiga vai pro catch com o erro
+
+// Controlador responsável por adicionar um usuário
 const addUserController = async (req, res) => {
     try{
         const username = req.body.username;
@@ -11,6 +14,7 @@ const addUserController = async (req, res) => {
     }
 };
 
+// Controlador responsável por encontrar todos os usuários
 const findUsersController = async (req, res) => {
     try{
         return res.status(200).send(await userService.findUsersService());
@@ -20,6 +24,7 @@ const findUsersController = async (req, res) => {
     }
 };
 
+// Controlador responsável por alternar a estrela de um usuário
 const toggleUserController = async (req, res) => {
     try{
         await userService.toggleUserService(req.params.username);
@@ -30,6 +35,7 @@ const toggleUserController = async (req, res) => {
     }
 };
 
+// Controlador responsável por deletar um usuário
 const deleteUserController = async (req, res) => {
     try{
         await userService.deleteUserService(req.params.username);

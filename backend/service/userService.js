@@ -5,7 +5,10 @@ const { User } = require("../model/user.js");
 
 // Lista que salva os usuários em memória
 const listaUsers = [];
+
+// Adduser no "listaUsers"
 async function addUserService(username) {
+
     // Verifica se tem 5 users e retorna err
     if(listaUsers.length >= 5){
         throw new Error('Limite máximo atingido!');
@@ -23,10 +26,12 @@ async function addUserService(username) {
     listaUsers.push(usuario);
 }
 
+// Busca todos os Users em "listaUsers"
 async function findUsersService(){
     return listaUsers;
 }
 
+// Deleta Usuário no "listaUsers"
 async function deleteUserService(username) {
     let index = listaUsers.findIndex(user => user.username == username);
     if(index == -1){
@@ -35,6 +40,7 @@ async function deleteUserService(username) {
     listaUsers.splice(index, 1);
 }
 
+// Alterna entre true e false a estrela
 async function toggleUserService(username) {
     let index = listaUsers.findIndex(user => user.username == username);
     let indexEstrela = listaUsers.findIndex(user => user.estrela == true);

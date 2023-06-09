@@ -5,6 +5,8 @@ import {toggleUser, deleteUser} from '../../services/authService'
 
 const Card = ({ user, replace }) => {
 
+  // Aqui está o meu Card que é renderizado na minha Lista, basicamente é toda id visual do Card, utiliza o handToggle e handle delete para trabalhar com a marcação da estrela e do deletar
+
   const handleToggle = async (evento) => {
     evento.preventDefault();
     const response = await toggleUser(user.username);
@@ -19,11 +21,11 @@ const Card = ({ user, replace }) => {
 
 
   return (
-    <div className='fundoPesquisa flex p-5 mt-5 rounded-sm relative'>
+    <div className='Card fundoPesquisa flex p-5 mt-5 rounded-sm relative'>
         <img className = "rounded-full h-24" src={user.avatar} />
         <div className='flex flex-col text-stone-200 mt-2 ml-12'>
         {user.nome ? (
-          <p className='font-display mb-2 text-2xl font-semibold'>{user.nome}</p>
+          <p id = "nome" className='font-display mb-2 text-2xl font-semibold'>{user.nome}</p>
         ) : (
           <p className='font-display mb-2 text-2xl font-semibold text-stone-500 line-through'>Usuário sem nome</p>
         )}
@@ -35,16 +37,20 @@ const Card = ({ user, replace }) => {
           {user.username}
         </Link>
         </div>
-        <button onClick = {handleToggle} type="button" className="right-2 top-2 h-8 w-16 absolute flex justify-center items-center bg-gray-600 hover:bg-gray-700 focus:ring-gray-500 focus:ring-offset-gray-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
+        <button 
+          onClick = {handleToggle} 
+          type="button" 
+          className="star right-2 top-2 h-8 w-16 absolute flex justify-center items-center bg-gray-600 hover:bg-gray-700 focus:ring-gray-500 focus:ring-offset-gray-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+        >
         {user.estrela ? (
-          <AiFillStar className='fill-yellow-500' />
+          <AiFillStar className='iconStar fill-yellow-500' />
         ) : (
           <AiOutlineStar />
         )}
           Star
         </button>
 
-        <button onClick = {handleDelete} className='text-white hover:text-red-500 absolute right-2 bottom-2'>
+        <button onClick = {handleDelete} className='deleteButton text-white hover:text-red-500 absolute right-2 bottom-2'>
           <AiOutlineCloseSquare />
         </button>
     </div>

@@ -8,6 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
 
+    // Essa é minha página principal, aqui eu faço tanto a ordenação quanto colocar os cards na tela com 2 Hooks "useState" e "useEffect"
+
     const [sort, setSort] = useState(false)
 
     const [cards, setCards] = useState([]);
@@ -42,14 +44,14 @@ const Home = () => {
         <main>
             <Navbar replace = {getAllCards} />
             <div className='flex justify-end items-center mt-4 w-5/6'>
-            <button onClick={handleSortAsc} className='text-white hover:text-yellow-500'>
+            <button onClick={handleSortAsc} id = "ordenarButton" className='text-white hover:text-yellow-500'>
                     <AiOutlineSortAscending className='w-10 h-10'/>
             </button>
             </div>
             <div className = "flex justify-center">
                 <Cardlist cards = {cards} replace ={updateAllCards}/>
             </div>
-            <ToastContainer limit={3} />
+            <ToastContainer limit={3} className= "erroCard" />
         </main>
     )
 }
