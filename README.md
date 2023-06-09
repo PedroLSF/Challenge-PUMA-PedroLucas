@@ -66,15 +66,15 @@ Aqui utilizei os Jests para fazer os possíveis testes do problema em questão
 1. Faça o clone do projeto
  
 Backend:
-2. Instale os pacotes
-
-    ```
-     npm install
-    ```
-3. Vá para a pasta do backend
+2. Vá para a pasta do backend
 
      ```
      cd backend/
+    ```
+3.  Instale os pacotes
+
+    ```
+     npm install
     ```
     
 4. Execute o arquivo index.js
@@ -85,19 +85,24 @@ Backend:
     
 Frontend: 
 
-5. Abra outro terminal e vá para o a pasta **github** dentro do front
+5. Abra outro terminal e vá para o a pasta **github** dentro da pasta frontend
 
     ```
      cd frontend/github/
     ```
     
-6. Execute o front
+6.  Instale os pacotes
+
+    ```
+     npm install
+    ```
+7. Execute o front
 
     ```
      npm start
     ```
     
-7. Pronto, seu front e back estão ligados!!
+8. Pronto, seu front e back estão ligados!!
 
 Caso queira rodar os testes, pode fazer o seguinte:
 
