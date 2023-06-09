@@ -4,12 +4,13 @@
 
 Aqui irei listar o meu pensamento para desenvolver e como segui:
 
-1. Pensei em desenvolver o meu Backend
-2. Pensei em desenvolver meu Frontend
-3. Pensei em fazer os testes automatizados
-4. Pensei em fazer os testes unitários do backend com Jest
-5. Agora revisar e comentar alguns pontos
-6. Por fim, escrever esse guia kkk
+1. Levantar a ID. Visual do Github para tentar deixar o mais próximo possível dele
+2. Pensei em desenvolver o meu Backend
+3. Pensei em desenvolver meu Frontend
+4. Pensei em fazer os testes automatizados
+5. Pensei em fazer os testes unitários do backend com Jest
+6. Agora revisar e comentar alguns pontos
+7. Por fim, escrever esse guia kkk
 
 
 Vamos agora adentrar em cada ponto
