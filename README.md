@@ -66,11 +66,13 @@ Aqui utilizei os Jests para fazer os possíveis testes do problema em questão
 1. Faça o clone do projeto
  
 Backend:
+
 2. Vá para a pasta do backend
 
      ```
      cd backend/
-    ```
+     ```
+     
 3.  Instale os pacotes
 
     ```
@@ -106,7 +108,7 @@ Frontend:
 
 Caso queira rodar os testes, pode fazer o seguinte:
 
-1.Para abrir o Cypress
+1. Para abrir o Cypress
 
     ```
       npx cypress open
@@ -114,8 +116,8 @@ Caso queira rodar os testes, pode fazer o seguinte:
     
 3. Para executar o Jest
 
-  ```
-  npx jest
-  ```
+   ```
+   npx jest
+   ```
   
 Aqui já conseguimos rodar todos os pontos levantados, obrigado!
