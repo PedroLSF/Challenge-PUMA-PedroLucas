@@ -15,6 +15,10 @@ async function addUserService(username) {
     const res = await fetch(`https://api.github.com/users/${username}`);
     const data = await res.json();
 
+    if(data.message == "Not Found"){
+        throw new Error('Usuário não encontrado');
+    }
+
     let usuario = new User(data.login, data.name, data.avatar_url, data.html_url);
     listaUsers.push(usuario);
 }
