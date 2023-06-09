@@ -2,7 +2,7 @@ import Cardlist from '../components/Cards/cardList';
 import Navbar from '../components/NavBar/navbar';
 import { getUser } from '../services/authService';
 import { useState, useEffect } from 'react';
-import { AiOutlineSortAscending, AiOutlineSortDescending} from 'react-icons/ai';
+import { AiOutlineSortAscending } from 'react-icons/ai';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -20,12 +20,23 @@ const Home = () => {
 
     const getAllCards = async () => {
         const response = await getUser();
-        console.log(response.data)
         setCards(response.data);
+        setSort(false);
     }
 
     const handleSortAsc = () => {
-        const sortedData = [...cards].sort((a, b) => a.nome.localeCompare(b.nome));
+        const sortedData = [...cards].sort(
+            function(a, b) {
+                if (!a.nome) {
+                   return +1;
+                }
+            
+                if (!b.nome) {
+                   return -1;
+                }
+
+                return a.nome.localeCompare(b.nome);
+            });
         setCards(sortedData);
         setSort(true);
     };
@@ -33,7 +44,18 @@ const Home = () => {
     const updateAllCards = async () => {
         const response = await getUser();
         if(sort){
-            const sortedData = [...response.data].sort((a, b) => a.nome.localeCompare(b.nome));
+            const sortedData = [...response.data].sort(
+                function(a, b) {
+                    if (!a.nome) {
+                       return +1;
+                    }
+                
+                    if (!b.nome) {
+                       return -1;
+                    }
+    
+                    return a.nome.localeCompare(b.nome);
+                });
             setCards(sortedData);
         }else{
             setCards(response.data);
